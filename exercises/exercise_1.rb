@@ -15,7 +15,7 @@ puts "----------"
 # Your code goes below here ...
 
 # Burnaby (annual_revenue of 300000, carries men's and women's apparel)
-store = Store.create(
+@store1 = Store.create(
   name: "Burnaby",
   annual_revenue: 300_000,
   mens_apparel: true,
@@ -23,7 +23,7 @@ store = Store.create(
 )
 
 # Richmond (annual_revenue of 1260000 carries women's apparel only)
-store = Store.create(
+@store2 = Store.create(
   name: "Richmond",
   annual_revenue: 1_260_000,
   mens_apparel: false,
@@ -31,7 +31,7 @@ store = Store.create(
 )
 
 # Gastown (annual_revenue of 190000 carries men's apparel only)
-store = Store.create(
+@store3 = Store.create(
   name: "Gastown",
   annual_revenue: 190_000,
   mens_apparel: true,

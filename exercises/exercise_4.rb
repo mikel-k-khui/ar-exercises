@@ -8,7 +8,7 @@ puts "----------"
 
 # Your code goes here ...
 # Surrey (annual_revenue of 224000, carries women's apparel only)
-store = Store.create(
+@store4 = Store.create(
   name: "Surrey",
   annual_revenue: 224_000,
   mens_apparel: false,
@@ -16,7 +16,7 @@ store = Store.create(
 )
 
 # Whistler (annual_revenue of 1900000 carries men's apparel only)
-store = Store.create(
+@store5 = Store.create(
   name: "Whistler",
   annual_revenue: 1_900_000,
   mens_apparel: true,
@@ -24,7 +24,7 @@ store = Store.create(
 )
 
 # Yaletown (annual_revenue of 430000 carries men's and women's apparel)
-store = Store.create(
+@store6 = Store.create(
   name: "Yaletown",
   annual_revenue: 430_000,
   mens_apparel: true,
