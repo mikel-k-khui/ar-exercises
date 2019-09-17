@@ -22,6 +22,8 @@ puts "----------"
   womens_apparel: true
 )
 
+puts @store1.errors.messages
+
 # Richmond (annual_revenue of 1260000 carries women's apparel only)
 @store2 = Store.create(
   name: "Richmond",
@@ -29,6 +31,7 @@ puts "----------"
   mens_apparel: false,
   womens_apparel: true
 )
+puts @store2.errors.messages
 
 # Gastown (annual_revenue of 190000 carries men's apparel only)
 @store3 = Store.create(
@@ -37,5 +40,6 @@ puts "----------"
   mens_apparel: true,
   womens_apparel: false
 )
+puts @store3.errors.messages
 
 puts "There is #{Store.count} stores in Vancouver"

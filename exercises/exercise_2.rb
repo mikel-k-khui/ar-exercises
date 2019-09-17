@@ -5,9 +5,11 @@ puts "Exercise 2"
 puts "----------"
 
 # Your code goes here ...
-@store1 = Store.first
+first = Store.first
 query = Store.where(id: "2")
-@store1.update(name: "Canmore")
+puts first.name.inspect
+# first.name = "Victoria"
+# first.save
 
 # puts @store2.inspect
 # puts "What is in store 2? #{@store2[0].name}"
