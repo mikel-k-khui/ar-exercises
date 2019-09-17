@@ -1,5 +1,6 @@
 class Store < ActiveRecord::Base
-  has_many :employees, :dependent => :restrict_with_error
+  has_many :employees,
+    :dependent => :restrict_with_error
 
   # Stores must always have a name that is a minimum of 3 characters
   validates :name, length: { minimum: 3 }
