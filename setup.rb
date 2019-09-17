@@ -23,8 +23,9 @@ puts 'CONNECTED'
 puts 'Setting up Database (recreating tables) ...'
 
 ActiveRecord::Schema.define do
+  # put before store dependency
+  drop_table :employees if ActiveRecord::Base.connection.table_exists?(:employees) 
   drop_table :stores if ActiveRecord::Base.connection.table_exists?(:stores)
-  drop_table :employees if ActiveRecord::Base.connection.table_exists?(:employees)
   create_table :stores do |t|
     t.column :name, :string
     t.column :annual_revenue, :integer
@@ -33,10 +34,11 @@ ActiveRecord::Schema.define do
     t.timestamps null: false
   end
   create_table :employees do |table|
-    table.belongs_to :store
+    table.belongs_to :store, foreign_key: true
     table.column :first_name, :string
     table.column :last_name, :string
     table.column :hourly_rate, :integer
+    table.column :password, :string # added for stretch
     table.timestamps null: false
   end
 end
