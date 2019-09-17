@@ -3,6 +3,7 @@ class Employee < ActiveRecord::Base
   belongs_to :store, 
     class_name: "Store",
     foreign_key: "store_id"
+    
   validates :store, presence: true
   
   validates_associated :store
